@@ -1,47 +1,13 @@
-html, body {
+html,
+body {
   background-color: #fafafa;
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Helvetica Neue', Arial, san-serif;
   color: #2e2e2e;
 }
 
-h1.alex-header {
-  font-family: 'Crimson Text', serif;
-  margin-top: 0px;
-  margin-left: 20px;
-  font-size: 48px;
-  font-weight: 400;
-}
-
-h3.section-header {
-  font-family: 'Crimson Text', serif;
-  margin-top: 0px;
-  font-size: 24px;
-  font-weight: 400;
-}
-
-.alex-container {
-  height: 100%;
+#app {
   padding: 40px;
-}
-
-.alex-component {
-  margin: 20px 0px;
-  box-shadow: 0 1px 4px 0 rgba(13, 31, 39, 0.1);
-  background-color: #fff;
-  padding: 20px;
-}
-
-.alex-subsection {
-  margin-bottom: 8px;
-}
-
-.footer {
-  text-align: center;
-  font-size: 12px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  font-weight: 800;
 }
