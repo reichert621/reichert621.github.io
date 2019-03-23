@@ -15,7 +15,9 @@ import {
   Tooltip,
   colors
 } from './common/common';
-import { wait } from '../helpers/utils';
+import { wait, cache } from '../helpers/utils';
+
+const CACHE_KEY = '@@pinyin';
 
 const PosedCard = posed(Card)({
   enter: {
@@ -82,7 +84,7 @@ class Chinese extends React.Component<ChineseProps, ChineseState> {
       current: 0,
       history: [],
       checked: [],
-      pinned: [],
+      pinned: cache.get(CACHE_KEY) || [],
       type: 'practice',
       pose: 'enter',
       shuffle: false,
@@ -207,6 +209,7 @@ class Chinese extends React.Component<ChineseProps, ChineseState> {
       : pinned.concat(chars);
 
     this.setState({ pinned: update });
+    cache.set(CACHE_KEY, update);
   };
 
   renderCheckIcon(chars: string) {
