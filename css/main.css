@@ -618,6 +618,7 @@ hr {
   }
   .heading {
     margin-bottom: 10px;
+    display: none;
   }
   .game-intro {
     width: 55%;
