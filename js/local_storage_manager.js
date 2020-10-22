@@ -20,9 +20,9 @@ function LocalStorageManager() {
   this.storage = supported ? window.localStorage : window.fakeStorage;
 }
 LocalStorageManager.prototype.localStorageSupported = function () {
-  var testKey = 'test';
-  var storage = window.localStorage;
   try {
+    var testKey = 'test';
+    var storage = window.localStorage;
     storage.setItem(testKey, '1');
     storage.removeItem(testKey);
     return true;
